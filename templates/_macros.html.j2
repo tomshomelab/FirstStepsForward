@@ -1,0 +1,7 @@
+{# Render a markdown-flavoured body string as HTML.
+   Uses Python markdown via a context filter we register inline below.
+   We keep formatting minimal: bold (**…**) and paragraphs only.
+#}
+{% macro md(text) -%}
+  {{ text | md_to_html | safe }}
+{%- endmacro %}

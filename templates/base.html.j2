@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site.name }}{% endblock %} — {{ site.name }}</title>
+  <meta name="description" content="{% block meta_description %}{{ site.tagline }}{% endblock %}">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/nav.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/sections.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">{{ site.name }}</a>
+      <nav>
+        <ul>
+          {% for item in site.nav %}
+            <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-tagline">
+        <strong>{{ site.name }}</strong>
+        <p>{{ footer.tagline }}</p>
+      </div>
+      <div class="footer-columns">
+        {% for col in footer.columns %}
+          <div class="footer-col">
+            <h4>{{ col.title }}</h4>
+            <ul>
+              {% for link in col.links %}
+                <li>
+                  <a href="{{ link.href }}"
+                     {% if link.external %}target="_blank" rel="noopener"{% endif %}>
+                    {{ link.label }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>Copyright © {{ site.copyright_year }} {{ site.name }}. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>

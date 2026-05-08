@@ -1,0 +1,45 @@
+# VCS + CI
+.git
+.github
+.gitignore
+.gitattributes
+
+# Local-dev tooling that doesn't belong in the image
+.claude
+.vscode
+.idea
+.venv
+__pycache__
+*.py
+content
+templates
+scripts
+_reference
+
+# Build / orchestration files
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Docs
+README.md
+SOP*.md
+LAYOUT-IDEAS.md
+CHANGELOG.md
+LICENSE
+*.log
+
+# Node (unused here but defensive)
+node_modules
+.next
+.cache
+dist
+build

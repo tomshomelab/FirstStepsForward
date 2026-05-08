@@ -1,0 +1,15 @@
+tagline: "Situated in Surrey · Online sessions UK-wide"
+
+columns:
+  - title: "Practice"
+    links:
+      - {label: "Home",    href: "/"}
+      - {label: "About",   href: "/about.html"}
+      - {label: "Contact", href: "/#contact"}
+  - title: "Get in touch"
+    links:
+      - {label: "07853 431 363",                       href: "tel:+447853431363"}
+      - {label: "firststepsforward@btinternet.com",    href: "mailto:firststepsforward@btinternet.com", external: true}
+  - title: "Memberships"
+    links:
+      - {label: "National Counselling Society (MNCS)", href: "https://nationalcounsellingsociety.org/", external: true}

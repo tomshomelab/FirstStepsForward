@@ -1,0 +1,11 @@
+name: "First Steps Forward"
+tagline: "Counselling, Coaching, Mentoring, Advisory Teacher, and Autism Training Provider. Clinical Supervisor."
+location: "Surrey, UK"
+phone: "07853 431 363"
+email: "firststepsforward@btinternet.com"
+copyright_year: 2025
+
+nav:
+  - {label: "Home",    href: "/"}
+  - {label: "About",   href: "/about.html"}
+  - {label: "Contact", href: "/#contact"}

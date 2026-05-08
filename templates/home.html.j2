@@ -1,0 +1,130 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import md %}
+
+{% block title %}Counselling, coaching & autism training in Surrey{% endblock %}
+
+{% block content %}
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>{{ home.hero.heading }}</h1>
+      <p class="hero-sub">{{ home.hero.subheading }}</p>
+      {% if home.hero.email %}
+        <p class="hero-email">
+          <a href="mailto:{{ home.hero.email }}">{{ home.hero.email }}</a>
+        </p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="prose-section" id="ethos">
+    <div class="prose-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.ethos.heading }}</h2></div>
+      {{ md(home.ethos.body) }}
+    </div>
+  </section>
+
+  <section class="prose-section alt" id="neurodiversity">
+    <div class="prose-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.neurodiversity.heading }}</h2></div>
+      {{ md(home.neurodiversity.body) }}
+    </div>
+  </section>
+
+  <section class="prose-section" id="setting">
+    <div class="prose-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.setting.heading }}</h2></div>
+      {{ md(home.setting.body) }}
+    </div>
+  </section>
+
+  <section class="services-section alt" id="services">
+    <div class="section-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.services.heading }}</h2></div>
+      {% for s in home.services.entries %}
+        <div class="split-block {% if loop.index is even %}reverse{% endif %}">
+          {% if s.image %}
+            <div class="split-image">
+              <img src="{{ s.image }}" alt="{{ s.title }}">
+            </div>
+          {% else %}
+            <div class="split-image placeholder">{{ s.title }}</div>
+          {% endif %}
+          <div class="split-text">
+            <h3>{{ s.title }}</h3>
+            {{ md(s.body) }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="concerns-section" id="concerns">
+    <div class="section-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.concerns.heading }}</h2></div>
+      <p class="section-intro">{{ home.concerns.intro }}</p>
+      <ul class="concerns-list">
+        {% for c in home.concerns.entries %}
+          <li>{{ c }}</li>
+        {% endfor %}
+      </ul>
+      <p class="concerns-trailing">{{ home.concerns.trailing }}</p>
+    </div>
+  </section>
+
+  <section class="pricing-section alt" id="pricing">
+    <div class="section-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.pricing.heading }}</h2></div>
+      <p class="section-intro">{{ home.pricing.intro }}</p>
+      <ul class="pricing-list">
+        {% for p in home.pricing.entries %}
+          <li class="pricing-row">
+            <div class="price-title">{{ p.title }}</div>
+            <div class="price-line">
+              <span class="amount">{{ p.price }}</span> {{ p.unit }}
+            </div>
+            {% if p.note %}<p class="price-note">{{ p.note }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <div class="framed-wrap"><h2 class="framed">{{ home.contact.heading }}</h2></div>
+    </div>
+    <div class="section-inner contact-inner">
+      <div class="contact-text">
+        <p>{{ home.contact.intro }}</p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+447853431363">{{ site.phone }}</a>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+      {% if home.contact.form.enabled %}
+        <form class="contact-form" method="post" action="{{ home.contact.form.action or '#' }}">
+          {% for field in home.contact.form.fields %}
+            <label>
+              <span class="field-label">{{ field.label }}{% if field.required %} *{% endif %}</span>
+              {% if field.type == 'textarea' %}
+                <textarea name="{{ field.name }}" rows="5" {% if field.required %}required{% endif %}></textarea>
+              {% else %}
+                <input type="{{ field.type }}" name="{{ field.name }}" {% if field.required %}required{% endif %}>
+              {% endif %}
+            </label>
+          {% endfor %}
+          <button type="submit">{{ home.contact.form.submit_label }}</button>
+          {% if not home.contact.form.action %}
+            <p class="form-note"><small>Form is not yet wired up — please use the phone or email above.</small></p>
+          {% endif %}
+        </form>
+      {% endif %}
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+Captured from live site (https://firststepsforward.co.uk) on 2026-05-08
+via document.body.textContent. Use as the source of truth when diffing
+content YAML for parity. Sections appear duplicated where the original
+uses Show More / Show Less expanders (collapsed text + expanded text
+both live in the DOM).
+
+[chunk 1 of 4 — chars 0-3500]
+
+First Steps ForwardFirst Steps ForwardFirst Steps ForwardFirst Steps ForwardFirst Steps ForwardFirst Steps ForwardFirst Steps ForwardFirst Steps ForwardHomeAbout UsMoreHomeAbout UsHomeAbout UsFirst Steps Forward. First Steps Forward. First Steps Forward. First Steps Forward.  Counselling, Coaching, Mentoring, Advisory Teacher, and Autism Training Provider. Clinical Supervisor.firststepsforward@btinternet.comFirst Steps Forward. First Steps Forward. First Steps Forward. First Steps Forward.  Counselling, Coaching, Mentoring, Advisory Teacher, and Autism Training Provider. Clinical Supervisor.firststepsforward@btinternet.com Who is First Steps Forward?The PracticeEthosDave is a person-centred integrative counsellor, meaning that he is guided by the client as where they wish the session to go. That also means that he is not there to give answers, but to facilitate the client to achieve that themselves, empowering them to be able to transfer these skills to other challenging occasions in t
+
+[chunk 2 — chars 3500-7000]
+
+xes, and a variety of bird life.  Online sessions means that Dave is able to deliver counselling to any one in the UK. Dave takes private clients directly through recommendations from previous clients, through various platforms such as Counselling Directory, National Counselling and Psychotherapy Society Directory, the NAS directory, as well as through West Sussex and Surrey Council local offers, though he also has clients from all of the UK.  He worked through a local charity supporting people bereaved through the suicide of family or friends, as well as counselling directly both adults and young people who feel suicidal.  Dave also takes work from a national company who triage and match clients with specialist counsellors to meet their needs, this means a diverse and eclectic mix of needs are often being presented, and managed, in the counselling sessions. Dave's integrative coaching and counselling style and approach will be uniquely tailored to your needs and will be central to the
+
+[chunk 3 — chars 7000-11000]
+
+utism- Corporate Training, Educational and Social Care in-service trainingDomestic and sexual violence and abuse-partner and familiarDomestic violence and abuseDave has worked alongside other partner agencies to work with both perpetrators and with people who have been victimised through violence in the home. Whether this is partner violence, regardless of gender, or child/adolescent violence towards parents or carers. He has delivered training to police officers on inShow MoreDomestic violence and abuseDave has worked alongside other partner agencies to work with both perpetrators and with people who have been victimised through violence in the home. Whether this is partner violence, regardless of gender, or child/adolescent violence towards parents or carers. He has delivered training to police officers on investigating violence both as a lecturer and through a charity. Also, he has worked in social care where the children are often the unseen victims of parental discord, working on
+
+The full source HTML is at original.html (168KB) — open with grep for
+specific sections.

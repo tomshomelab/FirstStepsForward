@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  background-image:
+    linear-gradient(var(--c-overlay), var(--c-overlay)),
+    url("/assets/img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  color: #fff;
+  padding: var(--space-7) 1.25rem var(--space-7);
+  text-align: center;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.hero h1 {
+  margin-bottom: var(--space-3);
+  color: #fff;
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 60ch;
+  margin: 0 auto var(--space-4);
+  line-height: 1.55;
+}
+.hero-email {
+  margin-top: var(--space-4);
+  color: #fff;
+  font-size: 0.95rem;
+}
+.hero-email a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero-email a:hover {
+  color: #f0e8df;
+}
+
+.page-header {
+  background: var(--c-bg);
+  padding: var(--space-6) 1.25rem var(--space-5);
+  border-bottom: 1px solid var(--c-border);
+  text-align: center;
+}
+.page-header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.page-header h1 {
+  color: var(--c-text-strong);
+  font-family: var(--font-display);
+}
+.page-intro {
+  font-size: 1.05rem;
+  color: var(--c-muted);
+  margin-top: var(--space-2);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,167 @@
+/* Section wrappers. Alternating tone gives the same rhythm as the
+   GoDaddy original. */
+
+.prose-section,
+.services-section,
+.concerns-section,
+.pricing-section,
+.contact-section {
+  padding: var(--space-6) 1.25rem;
+}
+
+.prose-section.alt,
+.services-section.alt,
+.concerns-section.alt,
+.pricing-section.alt,
+.contact-section.alt {
+  background: var(--c-bg-alt);
+}
+
+.prose-inner,
+.section-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.prose-inner h3 {
+  margin: var(--space-4) 0 var(--space-2);
+  color: var(--c-accent);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+.prose-inner p {
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+}
+.prose-inner > p:first-of-type { margin-top: 0; }
+
+.section-intro {
+  color: var(--c-muted);
+  font-size: 1rem;
+  max-width: 60ch;
+  margin-bottom: var(--space-5);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* ── Alternating image-text blocks (services on the home page) ───── */
+.split-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  padding: var(--space-5) 0;
+}
+.split-block + .split-block { border-top: 1px solid var(--c-border); }
+.split-block.reverse .split-image { order: 2; }
+@media (max-width: 720px) {
+  .split-block,
+  .split-block.reverse {
+    grid-template-columns: 1fr;
+  }
+  .split-block.reverse .split-image { order: 0; }
+}
+.split-image {
+  background: var(--c-bg-alt);
+  border-radius: 4px;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+}
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.split-image.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px dashed var(--c-border);
+}
+.split-text h3 {
+  margin-bottom: var(--space-3);
+  color: var(--c-accent);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+.split-text p:last-child { margin-bottom: 0; }
+
+/* ── Concerns list — wrap-tag style ─────────────────────────────── */
+.concerns-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  margin: 0 auto var(--space-3);
+  max-width: var(--measure);
+  justify-content: center;
+}
+.concerns-list li {
+  margin: 0;
+  color: var(--c-text);
+  background: var(--c-bg-alt);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  font-size: 0.92rem;
+}
+.concerns-trailing {
+  color: var(--c-muted);
+  font-style: italic;
+  margin-top: var(--space-3);
+  text-align: center;
+}
+
+/* ── Qualifications list ─────────────────────────────────────────── */
+.qualifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 50ch;
+}
+.qualifications-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--c-border);
+  text-align: center;
+}
+.qualifications-list li:last-child { border-bottom: 0; }
+
+/* ── Pricing — plain text rows ───────────────────────────────────── */
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: var(--measure);
+}
+.pricing-row {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.pricing-row:last-child { border-bottom: 0; }
+.pricing-row .price-title {
+  font-weight: 500;
+  color: var(--c-text-strong);
+  margin-bottom: var(--space-1);
+  font-size: 1.05rem;
+}
+.pricing-row .price-line {
+  color: var(--c-text);
+  margin-bottom: var(--space-1);
+}
+.pricing-row .price-line .amount {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--c-accent);
+}
+.pricing-row .price-note {
+  font-size: 0.93rem;
+  color: var(--c-muted);
+  margin: var(--space-2) 0 0;
+  line-height: 1.55;
+}
